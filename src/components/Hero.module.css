@@ -1,0 +1,85 @@
+.hero {
+  padding-block: clamp(48px, 8vw, 96px) clamp(72px, 10vw, 120px);
+}
+
+.inner {
+  display: grid;
+  gap: 56px;
+  align-items: center;
+}
+
+.title {
+  font-size: clamp(2.125rem, 8vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  max-width: 30em;
+  margin-top: 24px;
+  font-size: clamp(1.0625rem, 1.4vw, 1.1875rem);
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 36px;
+}
+
+.secondary {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.secondary:hover {
+  text-decoration-color: var(--ink);
+}
+
+/* 시험지 표지의 응시 안내처럼 */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  max-width: 30rem;
+  margin-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.facts > div {
+  padding: 16px 20px 0 0;
+}
+
+.facts > div + div {
+  padding-left: 20px;
+  border-left: 1px solid var(--rule);
+}
+
+.facts dt {
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+.facts dd {
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 72px;
+  }
+
+  .title {
+    font-size: clamp(2.75rem, 4.6vw, 3.75rem);
+  }
+}

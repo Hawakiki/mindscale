@@ -1,0 +1,35 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: var(--cobalt);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.button:hover {
+  background: var(--cobalt-deep);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.md {
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+}
+
+.lg {
+  padding: 17px 30px;
+  border-radius: 10px;
+  font-size: 1.0625rem;
+}

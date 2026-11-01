@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 64px;
+}
+
+.home {
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+}
